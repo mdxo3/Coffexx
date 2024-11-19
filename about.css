@@ -1,0 +1,282 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #444444;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #444444;
+}
+.logo-container .logo {
+    font-size: 1.5rem;
+    color: #fe302f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fe302f;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    font-size: 1rem;
+}
+.header-logo-right img.circle-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+
+.nav-menu li a:hover {
+    color: #fe302f;
+    background-color: #ffffff;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:active {
+    color: #ffffff;
+    background-color: #fe302f;
+}
+
+.nav-menu li.submenu {
+    position: relative; 
+}
+
+.nav-menu li.submenu .dropdown {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li.submenu:hover .dropdown {
+    display: block; 
+}
+
+.nav-menu li.submenu .dropdown li {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.nav-menu li.submenu .dropdown li a {
+    display: block;
+    color: #444444;
+    text-decoration: none;
+}
+
+.nav-menu li.submenu .dropdown li a:hover {
+    background-color: #f1f1f1; 
+}
+section.py-5 {
+    padding: 50px 0;
+    background-color: #ffffff;
+    flex: 1;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-md-5, .col-md-6 {
+    flex: 1;
+    max-width: 100%;
+}
+
+.col-md-5 {
+    max-width: 45%;
+}
+
+.col-md-6 {
+    max-width: 100%;
+    max-width: none;
+    text-align: left;
+}
+
+.text-muted {
+    color: #777;
+    font-size: 1.1rem;
+}
+
+h2.display-5 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+p.lead {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    word-break: break-word;
+    white-space: normal;
+}
+
+.btn-primary {
+    background-color: #fe302f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #c42a2a;
+}
+
+
+footer {
+    background-color: #444444;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.footer-menu li a i {
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-5, .col-md-6 {
+        max-width: 100%;
+        flex: 1;
+    }
+
+    h2.display-5 {
+        font-size: 2rem;
+    }
+
+    p.lead {
+        font-size: 1rem;
+    }
+}
+section.py-5 {
+    padding: 50px 0;
+    background-color: #ffffff;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+.container{
+    margin-top:100px;
+    position: center;
+    max-width: 800px; 
+    
+}
+
+.counter-box {
+	display: block;
+	background: #f6f6f6;
+	padding: 40px 20px 37px;
+	text-align: center
+}
+
+.counter-box p {
+	margin: 5px 0 0;
+	padding: 0;
+	color: #909090;
+	font-size: 18px;
+	font-weight: 500
+}
+
+.counter-box i {
+	font-size: 60px;
+	margin: 0 0 15px;
+	color: #d2d2d2
+}
+
+.counter { 
+	display: block;
+	font-size: 32px;
+	font-weight: 700;
+	color: #666;
+	line-height: 28px
+}
+
+.counter-box.colored {
+      background: #3acf87;
+}
+
+.counter-box.colored p,
+.counter-box.colored i,
+.counter-box.colored .counter {
+	color: #fff
+}

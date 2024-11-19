@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <a href="#" class="logo">Coffex</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html">Начало</a></li>
+                <li class="submenu">
+                    <a href="machines.html">Кафемашини</a>
+                    <ul class="dropdown">
+                        <li><a href="nespresso.html" class="active">Nespresso</a></li>
+                        <li><a href="dolcegusto.html">Dolce Gusto</a></li>
+                        <li><a href="tassimo.html">Tassimo</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html">За Нас</a></li>
+                <li><a href="contact.html" class="active">Контакти</a></li>
+            </ul>
+            <div class="header-logo-right">
+                <a href="home.html">
+                    <img src="images/logo.png" alt="Coffex Logo" class="circle-logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+<h1 class="centered-bold">Свържете се с нас</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-2 py-5">
+                <form id="contact-form" method="post" action="contact.php" role="form">
+                    <div class="messages" id="form-message"></div>
+                    <div class="controls">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_name">Име *</label>
+                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Напишете името си *" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_lastname">Фамилия *</label>
+                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Моля напишете си фамилията *" required="required" data-error="Lastname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_email">Имейл *</label>
+                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Моля напишете си имейла *" required="required" data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="form_need">Моля уточнете от какво се нуждаете *</label>
+                                    <select id="form_need" name="need" class="form-control" required="required" data-error="От какво се нуждаете?.">
+                                        <option value=""></option>
+                                        <option value="Request quotation">Заяфка за оферта </option>
+                                        <option value="Request order status">Проверка на статута на поръчката</option>
+                                        <option value="Request copy of an invoice">Заявка за фактура</option>
+                                        <option value="Other">Друго</option>
+                                    </select>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="form_message">Съобщение *</label>
+                                    <textarea id="form_message" name="message" class="form-control" placeholder="Съобщение за нас *" rows="4" required="required" data-error="Моля оставете съобщение за нас."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-success btn-send" value="Изпрати">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+            </ul>
+            <p>Contact: info@coffex.com | +359 123 456 789</p>
+            <p>&copy; 2024 Coffex</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('form-message').textContent = 'Contact form successfully submitted. Thank you, I will get back to you soon!';
+        });
+    </script>
+</body>
+</html>

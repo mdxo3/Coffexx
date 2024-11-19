@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #444444;
+    background-color: white;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #444444;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #444444;
+}
+
+.logo-container .logo {
+    font-size: 1.5rem;
+    color: #fe302f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fe302f;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+footer {
+    background-color: #444444;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-menu li a {
+    color: #ffffff;
+}
+
+.footer-menu li a i {
+    margin-right: 5px;
+}
+
+.header-logo-right img.circle-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+.nav-menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-menu li a:hover {
+    color: #fe302f;
+    background-color: #ffffff;
+}
+
+.nav-menu li a.active,
+.nav-menu li a:active {
+    color: #ffffff;
+    background-color: #fe302f;
+}
+
+.nav-menu li.submenu {
+    position: relative;
+}
+
+.nav-menu li.submenu .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li.submenu:hover .dropdown {
+    display: block;
+}
+
+.nav-menu li.submenu .dropdown li {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.nav-menu li.submenu .dropdown li a {
+    display: block;
+    color: #444444;
+    text-decoration: none;
+}
+
+.nav-menu li.submenu .dropdown li a:hover {
+    background-color: #f1f1f1;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact-form h2 {
+    color: #6D4C41;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    text-align: left;
+    color: #6D4C41;
+}
+
+.contact-form input,
+contact-form select,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #fe302f;
+    outline: none;
+    box-shadow: 0 0 10px rgba(254, 48, 47, 0.3);
+}
+
+.contact-form button {
+    background-color: #fe302f;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    padding: 15px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #444444;
+    transform: scale(1.05);
+}
+
+.contact-form button:active {
+    transform: scale(1);
+}
+
+.text-muted {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.text-muted a {
+    color: #fe302f;
+    text-decoration: none;
+}
+
+.text-muted a:hover {
+    text-decoration: underline;
+}
+
+.centered-bold {
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+}
